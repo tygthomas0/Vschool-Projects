@@ -1,0 +1,200 @@
+.textwrap {
+    float:right;
+    margin:10px;
+    height: 45%;
+    width:30%;
+    display:none;
+}
+
+#menu {
+    width:100%;
+    height:100px;
+    position: fixed;
+    background-color: #011936;
+    border:2px solid black;
+    z-index:1;
+}
+
+#menu > #menu_container > h1 {
+    font-family:fantasy;
+    color: #f9dc5c;
+    font-size: 40px;
+    margin:10px;
+    text-shadow: -1px 1px #f4fffd, 1px 1px #011936;
+    letter-spacing: 1px;
+    position:relative;
+}
+#menu > #menu_container > a > p {
+    font-family:fantasy;
+    color:#ed254e;
+    font-size: 20px;
+    margin:-5px 10px 0px 10px;
+    float:left;
+    position:relative;
+}
+#menu >#menu_container > img {
+    display:none;
+}
+
+#content {
+    width:100%;
+    background-color: #011936;
+    height:auto;
+    margin-top:100px;
+    z-index:0;
+    position:absolute;
+}
+#content > footer {
+    border-top: 2px solid gray;
+    width:100%;
+    height:auto;
+    margin-top: 15%;
+    text-align: center;
+    color: #465362;
+    line-height:50px;
+}
+#content > h2 {
+    font-family:fantasy;
+    color: #f9dc5c;
+    font-size: 30px;
+    margin:10px;
+    letter-spacing: 1px;
+    position:relative;
+}
+#content > p {
+    font-family:fantasy;
+    color:#f4fffd;
+    font-size: 15px;
+    margin:5px 10px 10px 10px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+#content > .product > p {
+    color: gray;
+    margin: 5% 10% 10% 10%;
+
+}
+.productPhoto {
+    width:80%;
+    height:auto;
+    margin: 10% 10% 5% 10%;
+}
+#content > .product > h3 {
+    font-family:fantasy;
+    color:#f4fffd;
+    margin: 0% 10% 5% 10%;
+    letter-spacing: 1px;
+}
+.product {
+    width:80%;
+    display:inline-block;
+    height: auto;
+    border-radius:10%;
+    background-color: #023069;
+    margin: 5% 7.5% 0% 7.5%;
+}
+
+/*screen size minimum is 920px*/
+
+@media only screen and (min-width:920px) {
+    body {
+        background-image: url(jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+        margin:0px;
+        /* Photo by Jake Weirick on Unsplash */
+        background-size: cover;
+    }
+    
+    .textwrap {
+        float:right;
+        margin:10px;
+        height: 45%;
+        width:30%;
+        display:block;
+    }
+    
+    #menu {
+        width:100%;
+        height:100px;
+        position: fixed;
+        background-color: #011936;
+        border:2px solid black;
+        z-index:1;
+    }
+    #menu_container {
+        margin-left:20%;
+    }
+    #menu > #menu_container > h1 {
+        font-family:fantasy;
+        color: #f9dc5c;
+        font-size: 40px;
+        margin:10px;
+        text-shadow: -1px 1px #f4fffd, 1px 1px #011936;
+        letter-spacing: 1px;
+        position:relative;
+    }
+    #menu > #menu_container > a > p {
+        font-family:fantasy;
+        color:#ed254e;
+        font-size: 20px;
+        margin:-5px 10px 0px 10px;
+        float:left;
+        position:relative;
+    }
+    #menu >#menu_container > img {
+        position:relative;
+        float:right;
+        margin-right:23%;
+        margin-top:-60px;
+        display:block;
+    }
+    
+    #content {
+        width:62%;
+        margin-left:19%;
+        background-color: #011936;
+        height:auto;
+        margin-top:100px;
+        z-index:0;
+        position:absolute;
+    }
+    #content > footer {
+        border-top: 2px solid gray;
+        width:100%;
+        height:100px;
+        margin-top: 10%;
+        text-align: center;
+        color: #465362;
+        line-height:50px;
+        float:left;
+    }
+    #content > h2 {
+        font-family:fantasy;
+        color: #f9dc5c;
+        font-size: 30px;
+        margin:10px;
+        letter-spacing: 1px;
+        position:relative;
+    }
+    #content > p {
+        font-family:fantasy;
+        color:#f4fffd;
+        font-size: 15px;
+        margin:5px 10px 10px 10px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    .product {
+        width:35%;
+        display:block;
+        height: auto;
+        border-radius:10%;
+        background-color: #023069;
+        margin: 5% 7.5% 5% 7.5%;
+        float:left;
+    }
+    
+
+    
+}

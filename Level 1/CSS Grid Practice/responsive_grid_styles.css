@@ -1,0 +1,112 @@
+/* desktop screen */
+#grid-container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(75px, auto));
+    grid-gap:50px;
+}
+
+#grid-container > div {
+    width:100%;
+    
+    display:flex;
+    align-items: center;
+    font-size: 50px;
+    color:white;
+    padding-left:20px;
+}
+
+#header {
+    background-color: gray;
+    grid-column: 1 / -1;
+}
+#sidebar {
+    background-color: darkslategray;
+    grid-column: 1 / 2;
+}
+#content {
+    background-color: darkslategray;
+    grid-column: 2 / 4;
+}
+#sidebar2 {
+    background-color: lightslategray;
+    grid-column: 4 / 5;
+}
+#footer {
+    background-color: gray;
+    grid-column: 1 / -1;
+}
+
+/* tablet screen */
+@media screen and (max-width:990px) {
+    #grid-container {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, minmax(75px, auto));
+        grid-gap:50px;
+    }
+
+    #grid-container > div {
+        width:100%;
+    }
+
+    #header {
+        background-color: gray;
+        grid-column: 1 / -1;
+    }
+    #sidebar {
+        background-color: darkslategray;
+        grid-column: 1 / 2;
+    }
+    #content {
+        background-color: darkslategray;
+        grid-column: 2 / -1;
+    }
+    #sidebar2 {
+        background-color: lightslategray;
+        grid-column: 1 / -1;
+    }
+    #footer {
+        background-color: gray;
+        grid-column: 1 / -1;
+    }
+}
+
+/* phone screen */
+@media screen and (max-width:480px) {
+    #grid-container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(75px, auto));
+        grid-gap:15px;
+    }
+
+    #grid-container > div {
+        width:100%;
+    }
+
+    #header {
+        background-color: gray;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    #sidebar {
+        background-color: darkslategray;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    #content {
+        background-color: darkslategray;
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    #sidebar2 {
+        background-color: lightslategray;
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+    #footer {
+        background-color: gray;
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+    }}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#666666;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:none;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:109px;}
+	.st6{font-size:48px;}
+</style>
+<g id="Layer_2">
+	<rect class="st0" width="800" height="800"/>
+</g>
+<g id="Layer_1">
+	<g>
+		<path class="st1" d="M631.2,546H183.8c-20.3,0-36.8-16.5-36.8-36.8V272.8c0-20.3,16.4-36.8,36.8-36.8H280h351.2
+			c20.3,0,36.8,16.4,36.8,36.8v236.5C668,529.5,651.5,546,631.2,546z"/>
+	</g>
+	<path class="st1" d="M332.5,139.5c0,0-54-4-53.5,96.5s258,0,258,0s7.5-96.5-48-96.5S332.5,139.5,332.5,139.5z"/>
+	<rect x="337" y="173" class="st2" width="138" height="37"/>
+	<circle class="st2" cx="406.5" cy="391.5" r="115.5"/>
+	<circle class="st1" cx="406" cy="391" r="77"/>
+	<rect x="385" y="351" class="st3" width="79" height="81"/>
+	<text transform="matrix(1 0 0 1 375 433.3887)" class="st2 st4 st5">?</text>
+	<rect x="182" y="596" class="st3" width="459" height="137"/>
+	<text transform="matrix(1 0 0 1 351.1167 630.0801)" class="st1 st4 st6">Photo</text>
+	<text transform="matrix(1 0 0 1 293.7867 687.6801)" class="st1 st4 st6">Unavailable</text>
+</g>
+</svg>

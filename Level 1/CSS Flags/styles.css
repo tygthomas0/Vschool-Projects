@@ -1,0 +1,389 @@
+h1 {
+    text-align:center;
+}
+
+section {
+    width:30%;
+    margin:1.5%;
+    float:left;
+}
+
+.container_r1 {
+    min-width: 30%;
+    margin:1.5%;
+    position:relative;
+    background-color: gray;
+    /*float:left;*/
+}
+
+.flag {
+    box-shadow: 5px 5px 20px black;
+}
+
+.expanse {
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+}
+
+.france {
+    height:200px;
+    width:300px;
+    margin:5%;
+    box-shadow: 0;
+    display:block;
+    position:relative;
+}
+.france_blue {
+    width: 33.3%;
+    height: 100%;
+    background-color: #002495;
+    float:left;
+}
+.france_white {
+    width:33.4%;
+    height:100%;
+    background-color: #FFFFFF;
+    float:left;
+}
+.france_red {
+    width:33.3%;
+    height:100%;
+    background-color: #ED2938;
+    float:right;
+}
+
+.germany {
+    height:200px;
+    width:333px;
+    margin:5%;
+}
+.germany_black {
+    height:33.3%;
+    width:100%;
+    background-color: #000000;
+    float:top;
+}
+.germany_red {
+    height:33.4%;
+    width:100%;
+    background-color: #DE0002;
+    float:top;
+}
+.germany_yellow {
+    height:33.3%;
+    width:100%;
+    background-color: #FFCE00;
+    float:bottom;
+}
+
+.madagascar {
+    height:200px;
+    width:300px;
+    margin:5%;
+}
+.madagascar_white {
+    height:100%;
+    width:33.33%;
+    background-color: #FFFFFF;
+    float:left;
+}
+.madagascar_red {
+    height:50%;
+    width:66.67%;
+    float:right;
+    float:top;
+    background-color: #FC3E32;
+}
+.madagascar_green {
+    height:50%;
+    width:66.67%;
+    float:right;
+    float:bottom;
+    background-color: #007E39;
+}
+
+.switzerland {
+    height:200px;
+    width:200px;
+    margin:10px;
+    background-color: #FF0002;
+}
+.swiss_white_horizontal {
+    height: 20%;
+    width: 60%;
+    background-color: #FFFFFF;
+    margin-left: 20%;
+    margin-top: 40%;
+    position:relative;
+    float:left;
+    /*position:absolute;*/
+}
+.swiss_white_vertical {
+    height:60%;
+    width:20%;
+    background-color: #FFFFFF;
+    margin-left:40%;
+    margin-top:-40%;
+    position:relative;
+    float:left;
+    /*position:absolute;*/
+}
+
+.sweden {
+    height: 200px;
+    width: 320px;
+    margin: 10px;
+    background-color: #0269A6;
+}
+.sweden_yellow_vertical {
+    width: 12.5%;
+    height:100%;
+    background-color: #FECC00;
+    position:relative;
+    float:left;
+    margin-left:31.25%;
+    margin-top:-37.5%;
+}
+.sweden_yellow_horizontal {
+    height: 20%;
+    width:100%;
+    background-color: #FECC00;
+    position:relative;
+    margin-top:25%;
+    float:left;
+}
+
+.gambia {
+    height:200px;
+    width:300px;
+    margin:10px;
+}
+.gambia_red {
+    height:33.3%;
+    width:100%;
+    background-color: #CE1127;
+}
+.gambia_white {
+    height:33.3%;
+    width:100%;
+    background-color: #FFFFFF;
+}
+.gambia_blue {
+    height:66.3%;
+    width:100%;
+    background-color: #0D1D8B;
+    float:left;
+    margin-top:4%;
+}
+.gambia_green {
+    height:33.3%;
+    width:100%;
+    background-color: #3B7827;
+}
+
+.japan {
+    height:200px;
+    width:300px;
+    background-color: #FFFFFF;
+    margin:10px;
+}
+.japan_circle {
+    height:50%;
+    width:33.3%;
+    border-radius:50%;
+    position:relative;
+    float:left;
+    margin-left:33.3%;
+    margin-top:18%;
+    background-color: #BC022C;
+}
+
+.niger {
+    height:200px;
+    width:233px;
+    margin:10px;
+}
+.niger_orange {
+    height:33.3%;
+    width:100%;
+    background-color: #E15307;;
+}
+.niger_white {
+    height:33.3%;
+    width:100%;
+    background-color: #FFFFFF;
+}
+.niger_circle {
+    background-color: #E15307;
+    width:23.74%;
+    height:85%;
+    border-radius: 50%;
+    position:relative;
+    float:left;
+    margin-top:2%;
+    margin-left:38.13%;
+}
+.niger_green {
+    height:33.3%;
+    width:100%;
+    background-color: #10AF2A;
+}
+
+.belize {
+    height:200px;
+    width:333px;
+    background-color: #DA0712;
+    margin:10px;
+}
+.belize_blue {
+    background-color: #100E97;
+    height:80%;
+    width:100%;
+    float:left;
+    position: relative;
+    margin-top:6%;
+}
+.belize_emblem {
+    background-color: #FFFFFF;
+    width:35%;
+    height:72%;
+    float:left;
+    position:relative;
+    margin-left:32.5%;
+    margin-top:8%;
+    border-radius:50%;
+}
+.belize_image {
+    max-width:96%;
+    max-height:100%;
+    float:left;
+    position:relative;
+    margin-left:2%;
+    margin-top:2%;
+}
+
+.tonga {
+    height: 200px;
+    width: 400px;
+    background-color: #c20002;
+    margin:10px;
+}
+.tonga_white {
+    background-color: #ffffff;
+    height:50%;
+    width:41.625%;
+}
+.tonga_vertical {
+    background-color: #c20002;
+    height:80%;
+    width:16.216%;
+    float:left;
+    position:relative;
+    margin-left:42%;
+    margin-top:7%;
+}
+.tonga_horizontal {
+    background-color: #c20002;
+    height:27%;
+    width:48%;
+    float:left;
+    position:relative;
+    margin-left:25.826%;
+    margin-top:-32%;
+}
+
+.greece {
+    width:300px;
+    height:200px;
+    background-color: #0E5FAE;
+    margin:10px;
+}
+.greece_vertical {
+    height:55.43%;
+    width:7.5%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-left:14.875%;
+}
+.greece_horizontal {
+    width:37%;
+    height:11.236%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-top:15%;
+    margin-left:-22.5%;
+}
+.greece_short1 {
+    height:11.236%;
+    width:63%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-left:37%;
+    margin-top:-29.6%;
+}
+.greece_short2 {
+    height:11.236%;
+    width:63%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-left:37%;
+    margin-top:-14.4%;
+}
+.greece_long1 {
+    height:11.236%;
+    width:100%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-top:0%;
+}
+.greece_long2 {
+    height:11.236%;
+    width:100%;
+    background-color: #ffffff;
+    float:left;
+    position:relative;
+    margin-top:7.5%;
+}
+
+.maldives {
+    height:200px;
+    width:300px;
+    background-color: #D31133;
+    margin:10px;
+}
+.maldives_green {
+    height:50%;
+    width:66.7%;
+    background-color: #007E39;
+    float:left;
+    position:relative;
+    margin-left:16.66%;
+    margin-top:17.5%;
+}
+.maldives_white {
+    height: 66.86%;
+    width:33.43%;
+    float:left;
+    position:relative;
+    margin-left:40%;
+    margin-top:8%;
+    background-color: #FFFFFF;
+    border-radius:50%;
+}
+.maldives_moon {
+    height: 66.86%;
+    width:33.43%;
+    float:left;
+    position:relative;
+    margin-left:45%;
+    margin-top:-33.5%;
+    background-color: #007E39;
+    border-radius:50%;
+}
