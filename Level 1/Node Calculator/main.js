@@ -4,7 +4,7 @@ var userNum1;
 var userNum2;
 var operation;
 
-operation = readlineSync.question("What operation do you want to perform? [add], [sub]tract, [mul]tiply, [div]ide ");
+operation = readlineSync.question("What operation do you want to perform? [add], [sub]tract, [mul]tiply, [div]ide ? ");
 
 if (operation === "add") {
     userNum1 = readlineSync.questionInt("What is your first number? ");
