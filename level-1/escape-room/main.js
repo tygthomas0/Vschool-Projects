@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 
-const userName = readline.question("What is your name? ")
+const userName = readline.question("What is your name? ");
 var userStatus = true;
 var keyStatus = false;
 var userChoice;
