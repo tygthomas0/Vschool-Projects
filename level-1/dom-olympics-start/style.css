@@ -8,7 +8,7 @@
     color: peachpuff;
 }
 
-.messages {
+#messages {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -22,19 +22,20 @@
     padding: 10px;
 }
 
-.message {
+.messageRight {
     padding: 5px;
-}
-
-.right {
     align-self: flex-end;
     background-color: lightblue;
+    width:auto;
 }
 
-.left {
+.messageLeft {
+    padding: 5px;
     align-self: flex-start;
     background-color: burlywood;
+    width:auto;
 }
+
 #theme-drop-down {
     margin-top: 20px;
 }

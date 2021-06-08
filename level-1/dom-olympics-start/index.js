@@ -19,24 +19,28 @@ byLine.style.fontWeight = "bold";
 document.getElementById("headingColor").style.color = "gold";
 
 //changing text of initial messages
-var messageList = document.getElementsByClassName("message");
-messageList[0].textContent = "I like pie";
-messageList[1].textContent = "So do I";
-messageList[2].textContent = "That's cool";
-messageList[3].textContent = "Same";
+var messageLeftList = document.getElementsByClassName("messageLeft");
+var messageRightList = document.getElementsByClassName("messageRight");
+messageLeftList[0].textContent = "I like pie";
+messageLeftList[1].textContent = "That's cool";
+messageRightList[0].textContent = "So do I";
+messageRightList[1].textContent = "Same";
 
 //clear messages when user hits "clear" button
 var clearButton = document.getElementById("clear-button");
 clearButton.addEventListener("click", function(){
-    for (var i = messageList.length - 1; i >= 0; i--) {
-        messageList[i].remove();
+    for (var i = messageLeftList.length - 1; i >= 0; i--) {
+        messageLeftList[i].remove();
+    }
+    for (var i = messageRightList.length - 1; i >= 0; i--) {
+        messageRightList[i].remove();
     }
 });
 
 //change color theme of messages when user uses theme dropdown menu
 var themeMenu = document.getElementById("theme-drop-down");
-var rightMessage = document.getElementsByClassName("right");
-var leftMessage = document.getElementsByClassName("left");
+var rightMessage = document.getElementsByClassName("messageRight");
+var leftMessage = document.getElementsByClassName("messageLeft");
 themeMenu.addEventListener("click", function(){
     var option = themeMenu.options[themeMenu.selectedIndex].value;
     if (option === "theme-one") {
@@ -63,16 +67,15 @@ var sendButton = document.getElementById("send");
 sendButton.addEventListener("click", function(){
     var messageContainer = document.getElementById("messages");
     var newMessage = document.createElement("div");
-    newMessage.classList.add("message");
     var content = document.getElementById("input").value;
     newMessage.innerText = content;
     if (messageSide == "left") {
-        newMessage.classList.add("left");
+        newMessage.classList.add("messageLeft");
         messageSide = "right";
         messageContainer.append(newMessage);
     }
     else if (messageSide == "right") {
-        newMessage.classList.add("right");
+        newMessage.classList.add("messageRight");
         messageSide = "left";
         messageContainer.append(newMessage);
     }
