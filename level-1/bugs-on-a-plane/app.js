@@ -1,28 +1,34 @@
-var form = document["airline-form"];
+var form = document.getElementById("airline-form");
 
 function formAlert() {
-    var firstName = form.elements["firstName"].value;
-    var lastName = form.elements["lastName"].value;
-    var age = form.elements["age"].value;
-    var gender = form.elements["gender"].value;
-    var location = form.elements["travel-location"].value;
+    var firstName = document.getElementsByName("first-name")[0].value;
+    var lastName = document.getElementsByName("last-name")[0].value;
+    var age = document.getElementsByName("age")[0].value;
+    var genderSelect = document.getElementsByName("gender");
+    if (genderSelect[0].checked) {
+        var gender = "Male";
+    }
+    if (genderSelect[1].checked) {
+        var gender = "Female";
+    }
+    if (genderSelect[2].checked) {
+        var gender = "Meh..";
+    }
+    var location = document.getElementsByName("travel-location")[0].value;
     var diet = [];
-    if (form.elements['vegan'].checked) {
+    if (form['vegan'].checked) {
         diet.push(document.getElementById("vegan").value);
     }
-    if (form.elements['gluten'].checked) {
+    if (form['gluten'].checked) {
         diet.push(document.getElementById('gluten').value);
     }
-    if (form.elements['paleo'].checked) {
+    if (form['paleo'].checked) {
         diet.push(document.getElementById('paleo').value);
     }
-    console.log("working");
-
     alert("First Name: " + firstName + "\nLast Name: " + lastName + "\nAge: " + age + "\nGender: " + gender + "\nTravel Location: " + location + "\nDiet: " + diet + "\nAwesome, now if you die, it won't be an accident..");
 }
 
 form.addEventListener("submit", function(event) {
-    
-    formAlert();
     event.preventDefault();
+    formAlert();
 });
