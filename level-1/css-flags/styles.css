@@ -1,23 +1,26 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 h1 {
     text-align:center;
 }
 
+h2 {
+    text-align: center;
+}
+
 section {
-    width:30%;
+    width:100%;
+    height:100%;
     margin:1.5%;
     float:left;
 }
 
-.container_r1 {
-    min-width: 30%;
-    margin:1.5%;
-    position:relative;
-    background-color: gray;
-    /*float:left;*/
-}
-
 .flag {
     box-shadow: 5px 5px 20px black;
+    margin:0 auto;
 }
 
 .expanse {
@@ -30,7 +33,7 @@ section {
 .france {
     height:200px;
     width:300px;
-    margin:5%;
+    
     box-shadow: 0;
     display:block;
     position:relative;
@@ -57,7 +60,7 @@ section {
 .germany {
     height:200px;
     width:333px;
-    margin:5%;
+    
 }
 .germany_black {
     height:33.3%;
@@ -81,7 +84,7 @@ section {
 .madagascar {
     height:200px;
     width:300px;
-    margin:5%;
+    
 }
 .madagascar_white {
     height:100%;
@@ -107,7 +110,7 @@ section {
 .switzerland {
     height:200px;
     width:200px;
-    margin:10px;
+    
     background-color: #FF0002;
 }
 .swiss_white_horizontal {
@@ -134,7 +137,7 @@ section {
 .sweden {
     height: 200px;
     width: 320px;
-    margin: 10px;
+    
     background-color: #0269A6;
 }
 .sweden_yellow_vertical {
@@ -158,7 +161,7 @@ section {
 .gambia {
     height:200px;
     width:300px;
-    margin:10px;
+    
 }
 .gambia_red {
     height:33.3%;
@@ -178,7 +181,7 @@ section {
     margin-top:4%;
 }
 .gambia_green {
-    height:33.3%;
+    height:33.4%;
     width:100%;
     background-color: #3B7827;
 }
@@ -187,7 +190,7 @@ section {
     height:200px;
     width:300px;
     background-color: #FFFFFF;
-    margin:10px;
+    
 }
 .japan_circle {
     height:50%;
@@ -203,7 +206,7 @@ section {
 .niger {
     height:200px;
     width:233px;
-    margin:10px;
+    
 }
 .niger_orange {
     height:33.3%;
@@ -226,7 +229,7 @@ section {
     margin-left:38.13%;
 }
 .niger_green {
-    height:33.3%;
+    height:33.4%;
     width:100%;
     background-color: #10AF2A;
 }
@@ -235,7 +238,7 @@ section {
     height:200px;
     width:333px;
     background-color: #DA0712;
-    margin:10px;
+    
 }
 .belize_blue {
     background-color: #100E97;
@@ -268,7 +271,7 @@ section {
     height: 200px;
     width: 400px;
     background-color: #c20002;
-    margin:10px;
+    
 }
 .tonga_white {
     background-color: #ffffff;
@@ -298,7 +301,7 @@ section {
     width:300px;
     height:200px;
     background-color: #0E5FAE;
-    margin:10px;
+    
 }
 .greece_vertical {
     height:55.43%;
@@ -356,7 +359,7 @@ section {
     height:200px;
     width:300px;
     background-color: #D31133;
-    margin:10px;
+    
 }
 .maldives_green {
     height:50%;
