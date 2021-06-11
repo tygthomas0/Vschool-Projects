@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>CSS Airlines</h1>
+        <form name="airlineForm">
+            <h3>First Name:</h3> <input type="text" id="firstName" name="firstName">
+            <h3>Last Name:</h3> <input type="text" id="lastName" name="lastName">
+            <h3>Age:</h3> <input type="number" id="age" name="age">
+            <h3>Gender:</h3> <p>Male:</p><input type="radio" name="gender" value="Male">
+            <br><p>Female:</p><input type="radio" name="gender" value="Female">
+            <br><p>Other:</p><input type="radio" name="gender" value="Other">
+            <h3>Where are you traveling to?</h3>
+            <select name="destin">
+                <option value="Europe">Europe</option>
+                <option value="China">China</option>
+                <option value="Antarctica">Antarctica</option>
+            </select>
+            <h3>Dietary Restrictions:</h3>
+            <input type="checkbox" value="Vegetarian" name="diet">Vegetarian<br>
+            <input type="checkbox" value="Gluten Free" name="diet">Gluten Free<br>
+            <input type="checkbox" value="Kosher" name="diet">Kosher
+            <br><br>
+            <button>Submit</button>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+    
+</body>
+</html>

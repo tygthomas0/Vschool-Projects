@@ -1,0 +1,62 @@
+body {
+    background-color: #757575;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    color: #ffdead;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    color: #7b468e;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+form > input {
+    margin: auto;
+    height: 50px;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+button {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
+
+#addition {
+    background-color: #f8de7e;
+}
+
+#subtraction {
+    background-color: #a2add0;
+}
+
+#multiply {
+    background-color: blanchedalmond;
+}
+
+input {
+    text-align: center;
+    font-size: 30px;
+}
