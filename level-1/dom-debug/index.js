@@ -1,3 +1,5 @@
+//assignment used to teach debugging with the web browser's developer tools, the code here isn't meant to work
+
 const colors = ["red", "blue", "green"]
 
 document.getElementById("add").addEventListener("onclick", function(e){
