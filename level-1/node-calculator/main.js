@@ -4,8 +4,10 @@ var userNum1;
 var userNum2;
 var operation;
 
+//asks user what operation they want to perform
 operation = readline.question("What operation do you want to perform? [add], [sub]tract, [mul]tiply, [div]ide ? ");
 
+//takes numbers that they want to use with custom messages depending on what operation they are doing
 if (operation === "add") {
     userNum1 = readline.questionInt("What is your first number? ");
     userNum2 = readline.questionInt("What number do you want to add to " + userNum1 + "? ");
@@ -23,6 +25,7 @@ else if (operation === "div") {
     userNum2 = readline.questionInt("What number do you want to divide " + userNum1 + " by? ");
 }
 
+//performs the operation on the numbers with custom messages depending on what operation they are doing
 function calculator(num1, num2, op) {
     var answer;
     if (op === "add") {
