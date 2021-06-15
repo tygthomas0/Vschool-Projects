@@ -1,0 +1,38 @@
+html, body {
+    height:100%;
+    width:100%;
+}
+
+#header {
+    margin:auto;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#counter {
+    margin: auto;
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#record {
+    margin: auto;
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#smallHeader {
+    margin:auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    margin: 50px 37.5% 0px 37.5%;
+    width:25%;
+    height:25%;
+}
