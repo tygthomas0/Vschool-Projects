@@ -1,7 +1,9 @@
+//grabbing HTML elements
 const addForm = document["addForm"];
 const subForm = document["subForm"];
 const mulForm = document["mulForm"];
 
+//functions for math operators
 function add(num1, num2) {
     return Number(num1) + Number(num2);
 }
@@ -12,7 +14,7 @@ function multiply(num1, num2) {
     return Number(num1) * Number(num2);
 }
 
-
+//performs math operations when clicking on the submit button for the relevant operation
 addForm.addEventListener("submit", function(event) {
     event.preventDefault();
     let answer = add(addForm.add1.value, addForm.add2.value);
