@@ -1,5 +1,6 @@
 var testString = "Hello";
 
+//takes a string, makes it uppercase, makes it lowercase, returns a string with the upper and lower case string combined
 function capitalizeAndLowercase(string) {
     var stringUpper = string.toUpperCase();
     var stringLower = string.toLowerCase();
@@ -8,9 +9,9 @@ function capitalizeAndLowercase(string) {
     console.log(combinedString);
     return combinedString;
 }
-
 capitalizeAndLowercase(testString);
 
+//returns the length of the first half of a string
 function halfStringLength(string) {
     var stringArr = string.split("");
 
@@ -19,9 +20,9 @@ function halfStringLength(string) {
     //console.log(stringLen);
     return stringLen;
 }
-
 halfStringLength(testString);
 
+//returns the first half of a string
 function halfString(string) {
     var stringLen = halfStringLength(string);
     var firstHalf = string.slice(0, stringLen);
@@ -29,9 +30,9 @@ function halfString(string) {
     console.log(firstHalf);
     return firstHalf;
 }
-
 halfString(testString);
 
+//returns a string with the first half uppercase and the second half lowercase
 function halfCapHalfLower(string) {
     var stringLen = halfStringLength(string);
     var firstHalf = string.slice(0, stringLen).toUpperCase();
@@ -42,11 +43,12 @@ function halfCapHalfLower(string) {
     console.log(combined);
     return combined;
 }
-
 halfCapHalfLower(testString);
+
 
 var testSentence = "hey friends! practice practice practice!";
 
+//takes a string and returns it with all words capitalized
 function capAfterSpace(string) {
     var sentenceChars = string.split("");
 
@@ -63,5 +65,4 @@ function capAfterSpace(string) {
     console.log(capSentence);
     return capSentence;
 }
-
 capAfterSpace(testSentence);
