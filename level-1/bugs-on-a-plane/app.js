@@ -1,5 +1,8 @@
+//initial file was riddled with bugs, assignment was to fix it and get it working
+
 var form = document.getElementById("airline-form");
 
+//takes all of the info from the HTML form and makes an alert window with it all
 function formAlert() {
     var firstName = document.getElementsByName("first-name")[0].value;
     var lastName = document.getElementsByName("last-name")[0].value;
