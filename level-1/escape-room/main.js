@@ -5,43 +5,46 @@ var userStatus = true;
 var keyStatus = false;
 var userChoice;
 var cont;
-var recursionCount = 0;
+var recursionCount = 0; //used to make it so that only one end message is played if the user continues
 
+//generates random number that determines which story text you get. Every scenario functions the same, just the text and options are different
+//comments will only be on first scenario because of this
 const storyGenerator = Math.random();
 
 function game(storyNumber) {
     if (0 <= storyNumber && storyNumber < 0.25) {
-        console.log(userName + ", one day, you decided to try out the new Escape Room at your local bowling alley. Unbeknownst to you, a deadly spider has gotten loose and is hiding somewhere in the room. You must find the key to the door, also hidden somewhere in the room. Be careful in your search.");
+        console.log(userName + ", one day, you decided to try out the new Escape Room at your local bowling alley. Unbeknownst to you, a deadly spider has gotten loose and is hiding somewhere in the room. You must find the key to the door, also hidden somewhere in the room. Be careful in your search."); //intro text
         while (userStatus) {
-            userChoice = readline.question("The room has the exit door, a large, ornate chair, a grandfather clock, and a jagged hole in the wall behind the chair. Where would you like to look? [door] [chair] [clock] [hole] ? ");
+            userChoice = readline.question("The room has the exit door, a large, ornate chair, a grandfather clock, and a jagged hole in the wall behind the chair. Where would you like to look? [door] [chair] [clock] [hole] ? "); //options
             if (userChoice === "door" && keyStatus === false) {
                 console.log("The door is stuck.");
             }
             else if (userChoice === "door" && keyStatus) {
                 console.log("You insert the key into the lock and open the door. You have successfully escaped!");
-                break;
+                break; //ends game if user has found the key
             }
             else if (userChoice === "chair") {
                 console.log("You sit in the chair. Nothing happens.");
             }
             else if (userChoice === "clock") {
                 console.log("You fiddle around with the clock, and the clockface swings open. The key is inside.");
-                keyStatus = true;
+                keyStatus = true; //user finds the key
             }
-            else if (userChoice === "hole") {
+            else if (userChoice === "hole") { //death/game over
                 console.log("The deadly spider bites your hand when you stick it into the hole. You are dead.");
                 cont = readline.question("Would you like to try again with the same story? [yes] [no] ? ");
+                //asks user if they want to continue using the same text
                 if (cont === "yes") {
-                    recursionCount++;
-                    game(storyGenerator);
+                    recursionCount++; //if the recursion count is greater than 0, it doesn't play the end message if they win
+                    game(storyGenerator); //starts over using the same text
                 }
-                else {
+                else { //if they don't want to continue, they are dead and the game ends
                     userStatus = false;
                 }
                 break;
             }
             else {
-                console.log("Not an option.");
+                console.log("Not an option."); //loops back over if they don't put in a valid input
             }
         }
     }
@@ -147,8 +150,8 @@ function game(storyNumber) {
             }
         }
     }
-    recursionCount--;
-    if (recursionCount === 0) {
+    recursionCount--; //removes recursion counter for every loop, ending at 0 on the last loop through
+    if (recursionCount === 0) { //plays message only in original loop through
         console.log("Thanks for playing!"); 
     }
 }
