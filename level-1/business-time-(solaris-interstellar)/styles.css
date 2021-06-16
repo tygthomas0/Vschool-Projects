@@ -99,9 +99,8 @@
 
 @media only screen and (min-width:920px) {
     body {
-        background-image: url(jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+        background-image: url(background-star.jpg);
         margin:0px;
-        /* Photo by Jake Weirick on Unsplash */
         background-size: cover;
     }
     
