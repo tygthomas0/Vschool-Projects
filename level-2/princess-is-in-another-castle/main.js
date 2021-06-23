@@ -26,7 +26,7 @@ class Player {
             this.status = "Small";
             console.log(`You got hit!`);
         }
-        else if (this.status = "Small") {
+        else if (this.status == "Small") {
             this.status = "Dead";
             console.log(`You got hit!`);
             this.gameActive = false;
@@ -41,7 +41,7 @@ class Player {
         else if (this.status == "Big") {
             this.status = "Powered Up";
         }
-        else if (this.status = "Small") {
+        else if (this.status == "Small") {
             this.status = "Big";
         }
         console.log(`You got a powerup!`);
