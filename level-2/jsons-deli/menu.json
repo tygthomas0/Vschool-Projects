@@ -1,0 +1,62 @@
+{
+    "appetizers": [
+        {
+            "name": "Regular Fries",
+            "ingredients": ["potatoes", "oil"],
+            "description": "French fries with garlic oil and shavings"
+        },
+        {
+            "name": "Garlic Fries",
+            "ingredients": ["garlic", "potatoes", "oil"],
+            "description": "French fries with garlic oil and shavings"
+        }
+    ],
+    "coldSandwiches": [
+        {
+            "name": "Pastrami and Swiss",
+            "ingredients": ["pastrami", "baguette", "swiss cheese", "lettuce", "mustard", "mayo"],
+            "description": "Pastrami and Swiss on a French Baguette"
+        },
+        {
+            "name": "Club",
+            "ingredients": ["roast beef", "turkey", "bacon", "lettuce", "tomato", "wheat bread"],
+            "description": "Roast beef, sliced turkey, and bacon on fresh wheat bread"
+        }
+    ],
+    "hotSandwiches": [
+        {
+            "name": "Reuben",
+            "ingredients": ["corned beef", "swiss cheese", "sauerkraut", "thousand-island dressing", "rye bread"],
+            "description": "Warm beef and cheese, sauerkraut, and dressing on rye bread"
+        },
+        {
+            "name": "Hot Pastrami and Swiss",
+            "ingredients": ["pastrami", "baguette", "swiss cheese", "lettuce", "mustard", "mayo", "heat"],
+            "description": "The Pastrami and Swiss, but warm"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Hot Fudge Sundae",
+            "ingredients": ["vanilla ice cream", "hot fudge", "maraschino cherry"],
+            "description": "The classic"
+        },
+        {
+            "name": "Garlic Sundae",
+            "ingredients": ["garlic ice cream", "garlic fudge", "garlic clove"],
+            "description": "Only for the brave"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Soda",
+            "ingredients": ["flavoring", "water"],
+            "description": "One of various fountain drinks"
+        },
+        {
+            "name": "Water",
+            "ingredients": ["hydrogen", "oxygen"],
+            "description": "The classic"
+        }
+    ]
+}
