@@ -1,0 +1,104 @@
+body {
+    background-color: #31afd4;
+    margin: 0;
+}
+@font-face {
+    font-family: openSans;
+    src: url(OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: openSansLight;
+    src: url(OpenSans-Light.ttf);
+}
+#pageHeader {
+    margin: auto auto 20px auto;
+    text-align: center;
+    font-size: 50px;
+    font-family: openSans;
+    color: #050505;
+}
+#flexbox {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+form > input {
+    width: 90%;
+    height: 40px;
+    margin: 0 5% 2% 3%;
+    font-size: 25px;
+}
+form > button {
+    width: 92%;
+    height: 40px;
+    margin: 0 5% 5% 3%;
+    font-size: 25px;
+}
+.completed {
+    margin-left: 25px;
+    width: 20px;
+    height: 20px;
+}
+.item {
+    width: 90%;
+    padding: 4%;
+    background-color: #902d41;
+    border: 2px solid #ff007f;
+    margin-bottom: 5px;
+}
+.item > input {
+    width: 90%;
+    height: 40px;
+    margin: 0 5% 2% 3%;
+    font-size: 25px;
+}
+.itemHeader {
+    color: #050505;
+    font-family: openSansLight;
+    font-size: 30px;
+}
+.itemImg {
+    width: 92%;
+    
+}
+.itemDesc {
+    font-family: openSansLight;
+    color: #050505;
+    font-size: 25px;
+}
+.editsavedelete {
+    width: 40%;
+    font-size: 15px;
+    margin: 5%;
+}
+
+@media only screen and (min-width: 400px) {
+    #pageHeader {
+        font-size: 60px;
+    }
+    #flexbox {
+        flex-flow: row wrap;
+    }
+    .itemDesc {
+        font-size: 20px;
+    }
+    .itemHeader {
+        font-size: 25px;
+    }
+    .item {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 447px) {
+    #pageHeader {
+        font-size: 75px;
+    }
+    .itemDesc {
+        font-size: 25px;
+    }
+    .itemHeader {
+        font-size: 30px;
+    }
+}
