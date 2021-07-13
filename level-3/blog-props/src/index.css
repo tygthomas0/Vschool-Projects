@@ -1,0 +1,120 @@
+@font-face {
+  font-family: openSans;
+  src: url(OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: openSansBold;
+  src: url(OpenSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: loraItalic;
+  src: url(Lora-Italic.ttf);
+}
+@font-face {
+  font-family: moderna;
+  src: url(MODERNA_.TTF);
+}
+
+body{
+  margin: 0;
+}
+#headerContainer {
+  width: 100%;
+  background-image: url(headerColor.png), url(header-img.jpg);
+  background-size: cover;
+}
+#headerHeader {
+  font-family: openSansBold;
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  margin: 130px 0 -20px 0;
+}
+#headerDesc {
+  font-family: openSans;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 0 0 150px 0;
+}
+
+#navbar {
+  color: white;
+  font-family: openSansBold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navHeader {
+  margin: 30px 0 0 40px;
+  font-size: 20px;
+}
+#navList {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+  font-size: 12px;
+  width: 35%;
+  margin: 37px 50px 0 0;
+}
+
+#blogList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 18%;
+  width: 55%;
+  list-style: none;
+}
+.blogPost {
+  width: 100%;
+}
+.postTitle {
+  font-family: openSansBold;
+  color: #212529;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.postSubtitle {
+  font-family: openSans;
+  color: #212529;
+  font-size: 25px;
+  margin: -10px 0 -10px 0;
+}
+.byline {
+  font-family: loraItalic;
+  color: #6c757d;
+}
+.darkAuthor {
+  color: #212529
+}
+
+#olderPosts {
+  height: 60px;
+  width: 180px;
+  background-color: #007189;
+  border: 1px solid #006a81;
+  margin-left: 58.75%;
+}
+#olderPosts > h1 {
+  font-family: openSansBold;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footer {
+  border-top: 1px solid #212529;
+  text-align: center;
+  margin-top: 25px;
+}
+#footer > img {
+  margin: 20px 10px 0 10px;
+}
+#footer > p {
+  font-family: loraItalic;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
