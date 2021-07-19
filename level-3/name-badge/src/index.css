@@ -1,0 +1,48 @@
+#pageHeader {
+    text-align: center;
+}
+
+#badgeForm {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#badgeForm > label > input {
+    width: 200px;
+}
+
+#badgeForm > label > textarea {
+    height: 15px;
+    width: 250px;
+}
+
+#badgeHeader, #aboutHeader, #description {
+    text-align: center;
+}
+
+.badgeContainer {
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 80%;
+    margin: 3% 10% 0 10%;
+}
+
+#badgeHeaderContainer {
+    border-bottom: 1px solid gray;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#infoContainer, #aboutContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#description {
+    width: 80%;
+}
