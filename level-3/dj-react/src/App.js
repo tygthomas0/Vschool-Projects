@@ -19,7 +19,7 @@ class App extends React.Component {
 
     smallTimeDJ() {
         if (this.state.colors[0] === "white") {
-            let colors = this.state.colors
+            let colors = [...this.state.colors]
             for (let i = 0; i < this.state.colors.length; i++) {
                 let color = "black"
                 colors[i] = color
@@ -28,7 +28,7 @@ class App extends React.Component {
         }
         
         else {
-            let colors = this.state.colors
+            let colors = [...this.state.colors]
             for (let i = 0; i < this.state.colors.length; i++) {
                 let color = "white"
                 colors[i] = color
@@ -39,7 +39,7 @@ class App extends React.Component {
     
     partyDJ() {
       if (this.state.colors[0] !== "purple") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           for (let i = 0; i < this.state.colors.length / 2; i++) {
               let color = "purple"
               colors[i] = color
@@ -48,9 +48,9 @@ class App extends React.Component {
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           for (let i = 0; i < this.state.colors.length / 2; i++) {
-              let color = this.state.colors[i + 2];
+              let color = colors[i + 2];
               colors[i] = color
           }
           this.setState({colors})
@@ -59,13 +59,13 @@ class App extends React.Component {
 
     leftBottomBlue() {
       if (this.state.colors[2] !== "blue") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[2] = "blue"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[2] = colors[0]
           this.setState({colors})
       }
@@ -73,13 +73,13 @@ class App extends React.Component {
 
     rightBottomBlue() {
       if (this.state.colors[3] !== "blue") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[3] = "blue"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[3] = colors[0]
           this.setState({colors})
       }
@@ -87,13 +87,13 @@ class App extends React.Component {
 
     changeTopLeft() {
       if (this.state.colors[0] !== "orange") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[0] = "orange"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[0] = colors[1]
           this.setState({colors})
       }
@@ -101,13 +101,13 @@ class App extends React.Component {
 
     changeTopRight() {
       if (this.state.colors[1] !== "green") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[1] = "green"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[1] = colors[2]
           this.setState({colors})
       }
@@ -115,13 +115,13 @@ class App extends React.Component {
 
     changeBottomLeft() {
       if (this.state.colors[2] !== "yellow") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[2] = "yellow"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[2] = colors[3]
           this.setState({colors})
       }
@@ -129,13 +129,13 @@ class App extends React.Component {
 
     changeBottomRight() {
       if (this.state.colors[3] !== "pink") {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[3] = "pink"
           this.setState({colors})
       }
       
       else {
-          let colors = this.state.colors
+          let colors = [...this.state.colors]
           colors[3] = colors[0]
           this.setState({colors})
       }
