@@ -1,0 +1,44 @@
+body {
+  margin: 0; 
+  padding: 0;
+  background-color: grey;
+}
+
+#header {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+  margin: 0 0 20px 0;
+  padding: 20px;
+}
+#headerHeader {
+  color: red;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+#profileContainer {
+  width: 60%;
+  margin: 50px 20% 0 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profile {
+  width: 30%;
+  margin: 1.6%;
+}
+
+.targetImg {
+  width: 100%;
+}
+
+.targetName {
+  background-color: aliceblue;
+  text-align: center;
+  width: 100%;
+  margin: -4px 0 0 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
