@@ -16,26 +16,26 @@ class ThemeContextProvider extends React.Component {
         this.getInfo()
     }
 
-    componentDidUpdate() {
-        this.getInfo()
-    }
-
     submitInfo = (uglyThing) => {
         if (this.state.editing) {
             axios.put(`https://api.vschool.io/tylerthomas/thing/${this.state.editingID}`, uglyThing)
-                .then(data => console.log(data))
+                .then(data => this.setState(prevState => { return {
+                    uglyThings: prevState.uglyThings.map(thing => { 
+                        return thing._id === this.state.editingID ? data.data : thing} )
+                }})) 
                 .catch(err => console.log(err))
-            this.setState({ editing: false })
+            
         }
         else {
             axios.post("https://api.vschool.io/tylerthomas/thing/", uglyThing)
                 .then(data => {
                     console.log(data)
-                    this.setState({
+                    this.setState(prevState => { return {
+                        uglyThings: [...prevState.uglyThings, data.data],
                         title: "",
                         description: "",
                         imgUrl: ""
-                    })
+                    }})
                 })
                 .catch(err => console.log(err))
         }
@@ -55,7 +55,7 @@ class ThemeContextProvider extends React.Component {
                 description: data.data.description,
                 imgUrl: data.data.imgUrl,
                 editingID: data.data._id,
-                editing: true
+                editing: true,
             }))
             .catch(err => console.log(err))
         window.scrollTo(0, 0)
@@ -63,7 +63,12 @@ class ThemeContextProvider extends React.Component {
 
     deleteInfo = (id) => {
         axios.delete(`https://api.vschool.io/tylerthomas/thing/${id}`)
-            .then(data => console.log(data))
+            .then(data => 
+                this.setState(prevState => { return {
+                    uglyThings: prevState.uglyThings.filter(thing => {
+                        console.log(thing._id, id)
+                        return thing._id !== id })
+                }}))
             .catch(err => console.log(err))
     }
 
