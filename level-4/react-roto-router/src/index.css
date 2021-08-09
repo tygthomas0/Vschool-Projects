@@ -1,0 +1,18 @@
+#navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  text-align: center;
+}
+
+.content {
+  width: 80%;
+  margin: 0 10%;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 25px;
+}
