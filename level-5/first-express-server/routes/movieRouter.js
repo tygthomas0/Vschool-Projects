@@ -21,6 +21,12 @@ movieRouter.get("/:movieId", (req, res) => {
     res.send(foundMovie)
 })
 
+movieRouter.get("/search/genre", (req, res) => {
+    const genre = req.query.genre
+    const filteredMovies = movies.filter(movie => movie.genre === genre)
+    res.send(filteredMovies)
+})
+
 movieRouter.post("/", (req, res) => {
     req.body._id = uuid()
     movies.push(req.body)
