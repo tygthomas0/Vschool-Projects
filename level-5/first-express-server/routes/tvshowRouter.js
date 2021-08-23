@@ -28,7 +28,7 @@ tvshowRouter.route("/")
     })
     .post((req, res) => {
         req.body._id = uuid()
-        movies.push(req.body)
+        tvshows.push(req.body)
         res.send(`Successfully added ${req.body.title} to database!`)
     })
 
