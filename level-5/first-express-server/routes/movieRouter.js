@@ -15,6 +15,12 @@ movieRouter.get("/", (req, res) => {
     res.send(movies)
 })
 
+movieRouter.get("/:movieId", (req, res) => {
+    const movieId = req.params.movieId
+    const foundMovie = movies.find(movie => movie._id === movieId)
+    res.send(foundMovie)
+})
+
 movieRouter.post("/", (req, res) => {
     req.body._id = uuid()
     movies.push(req.body)
