@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const { v4: uuidv4 } = require("uuid")
+const morgan = require("morgan")
 
 
 /*
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 app.use(/* "/", */ express.json()) //looks for a request body, and turns it into "req.body"
 //first argument is optional, if you don't put a pathway at the beginning, it will run the function every time
 
+app.use(morgan("dev"))
 
 //routes
 app.use("/movies", require("./routes/movieRouter.js"))
