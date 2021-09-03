@@ -1,0 +1,14 @@
+.bountyContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.bounty {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  min-width: 25%;
+  margin-top: 50px;
+  padding: 20px;
+}
