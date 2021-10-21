@@ -5,6 +5,11 @@ export default function Bounty(props) {
     const { firstName, lastName, living, bounty, affiliation, _id, deleteBounty, editBounty } = props
     const [editToggle, setEditToggle] = useState(false)
 
+    function editAndSave(updates, bountyID) {
+        editBounty(updates, bountyID)
+        setEditToggle(prevToggle => !prevToggle)
+    }
+
     return (
         <div className="bounty">
             { !editToggle ?
@@ -18,7 +23,7 @@ export default function Bounty(props) {
                 </>
                 :
                 <>
-                    <BountyForm firstName={firstName} lastName={lastName} living={living} bounty={bounty} affiliation={affiliation} btnText="Submit Edit" submit={editBounty} _id={_id} />
+                    <BountyForm firstName={firstName} lastName={lastName} living={living} bounty={bounty} affiliation={affiliation} btnText="Submit Edit" submit={editAndSave} _id={_id} />
                     <button onClick={() => setEditToggle(prevToggle => !prevToggle)} >Close</button>
                 </>
             }
