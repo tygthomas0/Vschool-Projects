@@ -102,21 +102,20 @@ export default function UserProvider(props) {
                             return poem
                         }
                     })
-                setUserState(prevState => ({
-                    ...prevState,
-                    allPoems: res.data,
-                    poems: userPoems
-                }))
+                const allPoems = res.data
                 userAxios.get('/api/comment')
                     .then(res => {
                         setUserState(prevState => ({
                             ...prevState,
-                            allComments: res.data
+                            allComments: res.data,
+                            allPoems: allPoems,
+                            poems: userPoems
                         }))
                     })
                     .catch(err => console.log(err))
             })
             .catch(err => console.log(err.response.data.errMsg))
+            
     }
 
     function addPoem(newPoem) {
@@ -236,9 +235,11 @@ export default function UserProvider(props) {
     
     }
 
+    /*
     useEffect(() => {
         getAllPoems()
     }, [])
+    */
 
     return (
         <UserContext.Provider value={{...userState, signup, login, logout, addPoem, addComment, resetAuthErr, getAllPoems, upvote, downvote}}>

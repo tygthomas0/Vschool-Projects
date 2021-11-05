@@ -43,12 +43,16 @@ function App() {
   }, [])
 
   return (
-    <>
-      <BountyForm submit={addBounty} btnText="Add Bounty" />
+    <div id="container">
+      <h1 id="pageHeader">Bounty Board</h1>
+      <div id="outerBountyForm">
+        <BountyForm submit={addBounty} btnText="Add Bounty" />
+      </div>
+      
       <div className="bountyContainer">
          {bounties.map(bounty => <Bounty {...bounty} key={bounty._id} deleteBounty={deleteBounty} editBounty={editBounty} />) }
       </div>
-    </>
+    </div>
   );
 }
 

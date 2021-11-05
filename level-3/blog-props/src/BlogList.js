@@ -11,7 +11,7 @@ function BlogList() {
                 {blogComponents}
             </ul>
             <div id="olderPosts">
-                <h1>OLDER POSTS -{'>'}</h1>
+                <h1>OLDER POSTS</h1>
             </div>
         </div>
     )

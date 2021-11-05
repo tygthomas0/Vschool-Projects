@@ -1,3 +1,13 @@
+@font-face {
+  font-family: trocadero;
+  src: url(fonts/Trocader.ttf);
+}
+@font-face {
+  font-family: durango;
+  src: url(fonts/Durango\ Western\ Eroded\ Demo.otf);
+}
+
+
 .bountyContainer {
   display: flex;
   flex-direction: row;
@@ -7,8 +17,113 @@
 .bounty {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  border: 1px solid black;
   min-width: 25%;
   margin-top: 50px;
   padding: 20px;
+  background-image: url(images/paper.PNG); /* photo by Pixabay on Pexels */
+  box-shadow: 0px 3px 25px black;
+  font-family: durango;
+}
+.bountyHeader {
+  font-size: 50px;
+  margin: -20px 0px;
+}
+.bountyAffiliation {
+  font-size: 30px;
+  margin: -10px 0px;
+}
+.bountyP {
+  font-size: 30px;
+  margin: -10px 0px;
+}
+
+#container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  background-image: url(images/wood-background.PNG); /* Photo by Giftpundits.com from Pexels */
+  background-size: cover;
+  font-family: durango;
+}
+
+.bountyForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bountyForm > input {
+  margin: 5px auto;
+  background-color: #ae8b62;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+  color: black;
+  border: 3px solid black;
+  font-family: durango;
+  max-width: 600px;
+  min-width: 300px;
+}
+::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.bountyForm > label {
+  margin: 5px auto;
+  font-size: 20px;
+  background-color: #ae8b62;
+  border: 3px solid black;
+  padding: 0px 7px 7px 7px;
+}
+
+#formButton {
+  margin: 5px auto;
+  background-color: #906040;
+  height: 40px;
+  line-height: 10px;
+  padding-top: -20px;
+  border: 3px solid black;
+  font-size: 20px;
+  font-family: durango;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+#outerBountyForm {
+  max-width: 60%;
+  margin: auto;
+}
+
+#livingInput {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+
+#pageHeader {
+  text-align: center;
+  font-size: 70px;
+  color: gold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: trocadero;
+}
+
+.fontWorkaround {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+
+.formButton {
+  font-family: durango;
+  font-size: 25px;
+  border: none;
+  background: none;
+  margin: 5px;
+  color: #b50000;
+}
+
+.buttonText {
+  margin-top: -10px;
 }

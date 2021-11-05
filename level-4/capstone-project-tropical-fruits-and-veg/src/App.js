@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Router>  
-      <div className="navbar">
+      <div className="navbar maxWidthContainer">
           <Link to="/" onClick={() => getPlants()} style={{ textDecoration: "none" }}>Home</Link>
           <Link to="/themePicker" style={{ textDecoration: "none" }}>Pick a Theme</Link>
       </div>

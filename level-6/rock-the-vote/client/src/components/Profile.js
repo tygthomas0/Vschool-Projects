@@ -7,10 +7,12 @@ import { UserContext } from '../context/UserProvider.js'
 export default function Profile(){
   const { user: { username }, addPoem, poems, getAllPoems} = useContext(UserContext)
 
+  /*
   useEffect(() => {
     getAllPoems()
   }, [])
-  
+  */
+
   return (
     <div className="profile">
       <h1>Welcome @{username}!</h1>

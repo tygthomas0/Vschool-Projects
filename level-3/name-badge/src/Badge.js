@@ -4,11 +4,13 @@ class Badge extends React.Component {
     render() {
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
         const styles = { backgroundColor: ("#" + randomColor) }
+        const backgroundStyles = { backgroundColor: "white" }
 
         return (
-            <div className="badgeContainer">
+            <div className="badgeContainer" style={backgroundStyles}>
                 <div id="badgeHeaderContainer" style={styles}>
-                    <h1>HELLO! My Name is: {this.props.firstName} {this.props.lastName}</h1>
+                    <h1>HELLO! My Name is:</h1>
+                    <h1>{this.props.firstName} {this.props.lastName}</h1>
                 </div>
                 <div id="infoContainer">
                     <p>Email: {this.props.email}</p>

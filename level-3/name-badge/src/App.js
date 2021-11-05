@@ -50,23 +50,23 @@ class App extends React.Component {
   
   render () {
     return (
-      <div>
+      <div id="mainContainer">
         <h1 id="pageHeader">Create a Badge</h1>
         <form id="badgeForm">
-          <label>First Name: <input type="text" name="firstName" value={this.state.firstName} placeholder="First Name" onChange={this.handleChange}/></label>
-          <label>Last Name: <input type="text" name="lastName" value={this.state.lastName} placeholder="Last Name" onChange={this.handleChange}/></label>
-          <label>Email: <input type="email" name="email" value={this.state.email} placeholder="Email" onChange={this.handleChange}/></label>
-          <label>Place of Birth: <input type="text" name="birthPlace" value={this.state.birthPlace} placeholder="Place of Birth" onChange={this.handleChange}/></label>
-          <label>Phone Number: <input type="tel" name="phone" value={this.state.phone} placeholder="Phone Number" onChange={this.handleChange}/></label>
-          <label>Favorite Food: <input type="text" name="favFood" value={this.state.favFood} placeholder="Favorite Food" onChange={this.handleChange}/></label>
-          <label>Your Description: <textarea placeholder={"Tell us about yourself..."} value={this.state.desc} name="desc" onChange={this.handleChange}/></label>
+          <input type="text" name="firstName" value={this.state.firstName} placeholder="First Name" onChange={this.handleChange}/>
+          <input type="text" name="lastName" value={this.state.lastName} placeholder="Last Name" onChange={this.handleChange}/>
+          <input type="email" name="email" value={this.state.email} placeholder="Email" onChange={this.handleChange}/>
+          <input type="text" name="birthPlace" value={this.state.birthPlace} placeholder="Place of Birth" onChange={this.handleChange}/>
+          <input type="tel" name="phone" value={this.state.phone} placeholder="Phone Number" onChange={this.handleChange}/>
+          <input type="text" name="favFood" value={this.state.favFood} placeholder="Favorite Food" onChange={this.handleChange}/>
+          <textarea placeholder={"Tell us about yourself..."} value={this.state.desc} name="desc" onChange={this.handleChange}/>
           <button onClick={this.createBadge}>Create Badge</button>
         </form>
         <br></br><br></br>
         <label> <h1 id="badgeHeader">Badges</h1>
-          <ul>
+          <div>
             {this.badges}
-          </ul>
+          </div>
         </label>
       </div>
       

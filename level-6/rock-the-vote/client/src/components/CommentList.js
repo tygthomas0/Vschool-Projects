@@ -7,10 +7,9 @@ export default function CommentList(props) {
     const { allComments } = useContext(UserContext)
 
     const initState = {
-        poemComments: allComments.filter(comment => {
-            if (comment.parent === poemId) {
-                return comment
-            }
+        poemComments: allComments.filter(function(comment) {
+            console.log(comment.parent === poemId)
+            return comment.parent === poemId
         }),
         viewingComments: false
     }
@@ -24,8 +23,13 @@ export default function CommentList(props) {
         }))
     }
 
+    console.log("allComments: ", allComments)
+    
+
     const {poemComments, viewingComments} = commentListState
+    console.log("poemComments: ", poemComments)
     return (
+        
         <div>
             {poemComments.length > 0 ?
                 <>

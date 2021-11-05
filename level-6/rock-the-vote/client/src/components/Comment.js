@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function Comment(props) {
-    const { user: {username}, content} = props
+    const { username, content} = props
 
     return (
         <>

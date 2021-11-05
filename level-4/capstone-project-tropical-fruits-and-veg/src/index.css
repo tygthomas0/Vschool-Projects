@@ -5,7 +5,7 @@
 
 body {
     font-family: tropical;
-    
+    letter-spacing: 2px;
 }
 .default {
     color:rgb(33, 117, 8);
@@ -26,6 +26,11 @@ body {
     color: rgb(181, 105, 255);
 }
 
+.boldText {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .smallCardContainer {
     display: flex;
     justify-content: space-around;
@@ -35,12 +40,14 @@ body {
 .smallCard {
     text-align: center;
     font-size: 75%;
-    margin: 0 0 5% 0;
+    margin: 10px;
 }
 .smallCard > img {
     width: 200px;
-    margin: 0 0 0 0;
+    height: 200px;
+    margin: 0 auto;
     display: block;
+    border: 10px solid #FFFFFF;
 }
 
 .navbar {
@@ -49,7 +56,11 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     font-size: 22px;
+}
 
+.maxWidthContainer {
+    max-width: 1190px;
+    margin: auto;
 }
 
 .homeHeader {
@@ -59,7 +70,7 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     width: 92%;
-    margin: 4%;
+    margin: 2% 4%;
 }
 
 .largeCardHeader {
@@ -73,7 +84,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .largeCardImage {
-    width: 90%;
-    margin: 2.5%;
+    max-width: 50%;
+    border: 10px solid #FFFFFF;
+    margin: 0 25%;
 }
 
+@media only screen and (max-width: 480px) {
+    .largeCardImage {
+        max-width: 90%;
+        margin: 0 2.5% 0 2.5%;
+    }
+}

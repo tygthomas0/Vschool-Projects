@@ -13,19 +13,19 @@ export default function Bounty(props) {
     return (
         <div className="bounty">
             { !editToggle ?
-                <>
-                    <h1>{firstName} {lastName}</h1>
-                    <h3>Affiliation: {affiliation}</h3>
-                    <p>Status: {living === true ? "Alive" : "Dead"}</p>
-                    <p>Value: ${bounty}</p>
-                    <button className="edit-btn" onClick={() => setEditToggle(prevToggle => !prevToggle)} >Edit</button>
-                    <button className="delete-btn" onClick={() => deleteBounty(_id)} >Delete</button>
-                </>
+                <div id="completeBounty">
+                    <h1 className="bountyHeader">{firstName} {lastName}</h1>
+                    <h3 className="bountyAffiliation">Affiliation <span className="fontWorkaround">:</span> {affiliation}</h3>
+                    <p className="bountyP">Status<span className="fontWorkaround">:</span> {living === true ? "Alive" : "Dead"}</p>
+                    <p className="bountyP">Worth {bounty} dollars</p>
+                    <button className="formButton" onClick={() => setEditToggle(prevToggle => !prevToggle)} >Edit</button>
+                    <button className="formButton" onClick={() => deleteBounty(_id)} >Cash In</button>
+                </div>
                 :
-                <>
+                <div>
                     <BountyForm firstName={firstName} lastName={lastName} living={living} bounty={bounty} affiliation={affiliation} btnText="Submit Edit" submit={editAndSave} _id={_id} />
-                    <button onClick={() => setEditToggle(prevToggle => !prevToggle)} >Close</button>
-                </>
+                    <button onClick={() => setEditToggle(prevToggle => !prevToggle)} className="formButton">Close</button>
+                </div>
             }
         </div>
     )

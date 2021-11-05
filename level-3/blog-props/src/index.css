@@ -15,20 +15,30 @@
   src: url(MODERNA_.TTF);
 }
 
+#homeContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
 body{
   margin: 0;
+}
+#colorContainer {
+  background-color: #6B7075;
 }
 #headerContainer {
   width: 100%;
   background-image: url(headerColor.png), url(header-img.jpg);
   background-size: cover;
+  max-width: 1200px;
+  margin: auto;
 }
 #headerHeader {
   font-family: openSansBold;
   font-size: 80px;
   text-align: center;
   color: white;
-  margin: 130px 0 -20px 0;
+  margin: 100px 0 -20px 0;
 }
 #headerDesc {
   font-family: openSans;
@@ -43,20 +53,20 @@ body{
   font-family: openSansBold;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #navHeader {
-  margin: 30px 0 0 40px;
+  margin: 30px 0 0 0;
   font-size: 20px;
 }
 #navList {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   list-style: none;
   font-size: 12px;
   width: 35%;
-  margin: 37px 50px 0 0;
+  margin: 37px 0 0 0;
 }
 
 #blogList {
@@ -89,13 +99,17 @@ body{
 .darkAuthor {
   color: #212529
 }
+#listContainer {
+  max-width: 1200px;
+  margin: auto;
+}
 
 #olderPosts {
   height: 60px;
   width: 180px;
   background-color: #007189;
   border: 1px solid #006a81;
-  margin-left: 58.75%;
+  margin: auto;
 }
 #olderPosts > h1 {
   font-family: openSansBold;
@@ -108,7 +122,7 @@ body{
 #footer {
   border-top: 1px solid #212529;
   text-align: center;
-  margin-top: 25px;
+  margin: 25px auto auto auto;
 }
 #footer > img {
   margin: 20px 10px 0 10px;
@@ -117,4 +131,23 @@ body{
   font-family: loraItalic;
   color: #6c757d;
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  #navHeader {
+    margin-left: 37px;
+  }
+  #navList {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #bloglist {
+    margin-left: 15%;
+  }
 }

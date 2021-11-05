@@ -5,22 +5,6 @@ import PlantCardSmall from "./PlantCardSmall"
 
 
 function MyList() {
-    /*
-    const {getPlants, savedPlants} = useContext(PlantContext)
-
-    var smallPlantCards = [];
-    for (let i = 0; i < savedPlants.length; i++) {
-        smallPlantCards.push(<label key={savedPlants[i].tfvname}>{savedPlants[i].tfvname}<Link to={`${savedPlants[i].tfvname}`} key={savedPlants[i].tfvname} onClick={() => getPlants("tfvitem", savedPlants[i].tfvname)} style={{ textDecoration: "none", color: "rgb(8, 92, 117)" }}><PlantCardSmall key={savedPlants[i].tfvname} searchTerm={"tfvitem"} name={savedPlants[i].tfvname} imageurl={savedPlants[i].imageurl} /></Link></label>)
-    }
-    
-
-    console.log("smallplantcards: ", smallPlantCards)
-    return (
-        <div>
-            {smallPlantCards}
-        </div>
-    )
-    */
 
     const {changeTheme} = useContext(PlantContext)
 

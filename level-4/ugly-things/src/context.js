@@ -9,7 +9,9 @@ class ThemeContextProvider extends React.Component {
         description: "",
         imgUrl: "",
         editing: false,
-        editingID: ""
+        showForm: false,
+        editingID: "",
+        addButtonText: "Add"
     }   
 
     componentDidMount() {
@@ -20,8 +22,12 @@ class ThemeContextProvider extends React.Component {
         if (this.state.editing) {
             axios.put(`https://api.vschool.io/tylerthomas/thing/${this.state.editingID}`, uglyThing)
                 .then(data => this.setState(prevState => { return {
+                    editing: false,
                     uglyThings: prevState.uglyThings.map(thing => { 
-                        return thing._id === this.state.editingID ? data.data : thing} )
+                        return thing._id === this.state.editingID ? data.data : thing} ),
+                    title: "",
+                    description: "",
+                    imgUrl: ""
                 }})) 
                 .catch(err => console.log(err))
             
@@ -39,7 +45,7 @@ class ThemeContextProvider extends React.Component {
                 })
                 .catch(err => console.log(err))
         }
-        
+        this.toggleForm()
     }
 
     getInfo = () => {
@@ -49,6 +55,7 @@ class ThemeContextProvider extends React.Component {
     }
 
     editInfo = (id) => {
+        this.toggleForm()
         axios.get(`https://api.vschool.io/tylerthomas/thing/${id}`)
             .then(data => this.setState({
                 title: data.data.title,
@@ -72,6 +79,23 @@ class ThemeContextProvider extends React.Component {
             .catch(err => console.log(err))
     }
 
+    toggleForm = () => {
+        var newMessage;
+        if (this.state.addButtonText === "Add") {
+            newMessage = "Cancel"
+        }
+        else {
+            newMessage = "Add"
+        }
+        this.setState(prevState => { return {
+            showForm: !prevState.showForm,
+            addButtonText: newMessage,
+            title: "",
+            description: "",
+            imgUrl: ""
+        }})
+    }
+
     handleChange = (event) => {
         const {name, value} = event.target
         this.setState({
@@ -86,11 +110,14 @@ class ThemeContextProvider extends React.Component {
                 title: this.state.title,
                 description: this.state.description,
                 imgUrl: this.state.imgUrl,
+                showForm: this.state.showForm,
+                addButtonText: this.state.addButtonText,
                 submitInfo: this.submitInfo,
                 getInfo: this.getInfo,
                 editInfo: this.editInfo,
                 deleteInfo: this.deleteInfo,
-                handleChange: this.handleChange
+                handleChange: this.handleChange,
+                toggleForm: this.toggleForm
             }}>
                 {this.props.children}
             </Provider>
@@ -99,6 +126,3 @@ class ThemeContextProvider extends React.Component {
 }
 
 export {ThemeContextProvider, Consumer as ThemeContextConsumer}
-
-//themecontextprovider will hold the array, and App will consume the array and create cards out of the array by mapping over it
-//state array will probably hold an array of objects => form will setState by pushing an object of information to prevState

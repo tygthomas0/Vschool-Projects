@@ -2,7 +2,6 @@ import React, {useContext} from "react"
 import {PlantContext} from "./PlantContext"
 
 function PlantCardSmall(props) {
-    //const {handleSave} = useContext(PlantContext)
     const {theme} = useContext(PlantContext)
 
     return (
@@ -15,6 +14,3 @@ function PlantCardSmall(props) {
 }
 
 export default PlantCardSmall
-
-//<h1 className="smallCardHeader">{props.name}</h1>
-//<label>Save Plant: <input id={`${props.name}Checkbox`} type="checkbox" onChange={() => handleSave(document.getElementById(`${props.name}Checkbox`).checked ? true : false, { name: props.name, imageurl: props.imageurl })}></input></label>

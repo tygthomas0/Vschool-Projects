@@ -7,9 +7,11 @@ import { UserContext } from '../context/UserProvider.js'
 export default function Public(){
   const { allPoems, getAllPoems } = useContext(UserContext)
   
+  /*
   useEffect(() => {
     getAllPoems()
   }, [])
+  */
 
   return (
     <div className="public">

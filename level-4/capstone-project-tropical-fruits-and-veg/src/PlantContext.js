@@ -7,7 +7,6 @@ function PlantContextProvider(props) {
 
     const [theme, setTheme] = useState("default")
 
-    //const [savedPlants, setSavedPlants] = useState([])
 
     function getPlants(searchArea = "search", searchTerm = "all") {
         //searchArea should only be either "search" or "tfvitem"
@@ -53,25 +52,6 @@ function PlantContextProvider(props) {
         console.log("theme in state after changing: ", theme)
     }
 
-    /*
-    function handleSave(saved, plantObj) {
-        console.log("Saved plants before saving: ", savedPlants)
-        if (saved) {
-            setSavedPlants(savedPlants => [...savedPlants, plantObj])
-            console.log("saved plants after saving: ", savedPlants)
-        }
-        else {
-            for (let i = 0; i < savedPlants.length; i++) {
-                if (plantObj.tfvname === savedPlants[i].tfvname) {
-                    setSavedPlants(savedPlants => savedPlants.splice(i, 1))
-                    break;
-                }
-            }
-            console.log("saved plants after removing the thing: ", savedPlants)
-        }
-    }
-    */
-
     useEffect(() => {
         document.body.style.backgroundColor = "#FFDFA3";
         getPlants()
@@ -79,7 +59,7 @@ function PlantContextProvider(props) {
     }, [])
 
     return (
-        <PlantContext.Provider value={{plants, getPlants, theme, changeTheme/*, savedPlants, handleSave */}}>
+        <PlantContext.Provider value={{plants, getPlants, theme, changeTheme}}>
             {props.children}
         </PlantContext.Provider>
     )

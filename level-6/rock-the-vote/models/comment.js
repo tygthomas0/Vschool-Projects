@@ -11,6 +11,9 @@ const commentSchema = new Schema({
         ref: "User",
         required: true
     },
+    username: {
+        type: String
+    },
     parent: {
         type: Schema.Types.ObjectId,
         ref: "Poem",
