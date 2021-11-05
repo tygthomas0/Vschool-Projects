@@ -1,0 +1,207 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #263238;
+	color: #d8c17a;
+	margin: 0rem auto;
+	text-align: center;
+}
+
+#pageHeader {
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bolder;
+	font-size: 2.3rem;
+	height: 5rem;
+	margin: 2rem auto 3.5rem auto;
+	letter-spacing: 0.2rem;
+	background-color: #263238;
+	color: #d8c17a;
+	text-align: center;
+	border-bottom: double 1px #d8c17a;
+	padding-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* Creator container styles */
+
+#creatorContainer {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: -0.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+	#creatorContainer {
+		display: flex;
+		flex-flow: column;
+	}
+	#savedMemeContainer {
+		margin-top: 30px;
+	}
+	#memeForm {
+		bottom: 0;
+		top: 5px;
+	}
+	#saveMemeButton {
+		margin-top: 25px;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	#pageHeader {
+		margin-left: 6rem;
+	} 
+	
+	#creatorContainer {
+		margin-left: 6rem;
+	}
+	#savedMemeContainer {
+		margin-left: 6rem;
+	}
+
+	#memePlaceholder > img {
+		width: 100%;
+		height: 100%;
+	}
+	#topText, #bottomText {
+		font-size: 60%;
+	}
+}
+
+/* Meme container styles */
+
+#memePlaceholder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0rem 1rem;
+	margin-bottom: -4rem;
+}
+
+#memePlaceholder > img {
+	height: 35rem;
+	width: 35rem;
+}
+
+#memePlaceholder > button {
+	position: relative;
+	bottom: 6.5rem;
+}
+
+#topText {
+	position: relative;
+	font-size: 300%;
+	min-width: 310px;
+	font-family: "Noto Sans", sans-serif;
+}
+
+#bottomText {
+	position: relative;
+	font-size: 300%;
+	min-width: 310px;
+	font-family: "Noto Sans", sans-serif;
+}
+
+#memeHeader {
+	text-align: center;
+	margin-bottom: 1.8rem;
+	font-size: 2.3rem;
+	font-family: "Noto Sans", sans-serif;
+}
+
+/* Form Styles */
+
+#memeForm {
+	position: relative;
+	bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#memeForm > div {
+	display: flex;
+	flex-direction: column;
+}
+
+#memeForm > div > label {
+	font-size: 1.2rem;
+}
+
+.inputBox {
+	all: unset;
+	text-align: left;
+	margin: 1rem 0rem;
+	font-size: 1.2rem;
+	height: 3rem;
+	border-radius: 15%;
+	padding-left: 0.5rem;
+	border: none;
+	background-color: #4d6470;
+	font-family: "Noto Sans", sans-serif;
+}
+
+.inputBox::placeholder {
+	font-size: 1.2rem;
+	color: rgb(172, 172, 172);
+}
+
+.colorInput {
+	text-align: center;
+	font-family: "Noto Sans", sans-serif;
+}
+
+/* Button styles */
+
+.button {
+	all: unset;
+	border: none;
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: #d8c17a;
+	color: #1c2529;
+	height: 3rem;
+	width: 10rem;
+	border-radius: 30%;
+	transition: ease-in-out 0.3s;
+}
+
+.button:hover {
+	background-color: #a3925d;
+	cursor: pointer;
+}
+
+.savedButton {
+	all: unset;
+	position: relative;
+	bottom: 2.7rem;
+	margin: -0.3rem 2rem 0.5rem 2rem;
+	border: none;
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: #d8c17a;
+	color: #1c2529;
+	height: 3rem;
+	width: 10rem;
+	border-radius: 30%;
+	transition: ease-in-out 0.3s;
+}
+
+.savedButton:hover {
+	background-color: #a3925d;
+	cursor: pointer;
+}
+
+#mainContainer {
+	font-size: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
