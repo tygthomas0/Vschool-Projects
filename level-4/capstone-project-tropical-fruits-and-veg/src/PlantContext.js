@@ -7,6 +7,8 @@ function PlantContextProvider(props) {
 
     const [theme, setTheme] = useState("default")
 
+    const [loading, setLoading] = useState(true)
+
 
     function getPlants(searchArea = "search", searchTerm = "all") {
         //searchArea should only be either "search" or "tfvitem"
@@ -24,6 +26,7 @@ function PlantContextProvider(props) {
                     }
                 }
                 setPlants(plants => plants = res.data.results)
+                setLoading(false)
             })
             .catch(err => console.log(err))
     }
@@ -55,11 +58,10 @@ function PlantContextProvider(props) {
     useEffect(() => {
         document.body.style.backgroundColor = "#FFDFA3";
         getPlants()
-        
     }, [])
 
     return (
-        <PlantContext.Provider value={{plants, getPlants, theme, changeTheme}}>
+        <PlantContext.Provider value={{plants, getPlants, theme, changeTheme, loading, setLoading}}>
             {props.children}
         </PlantContext.Provider>
     )
