@@ -73,7 +73,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 18%;
+  margin: auto;
   width: 55%;
   list-style: none;
 }
