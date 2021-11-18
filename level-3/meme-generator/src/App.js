@@ -198,6 +198,7 @@ class App extends React.Component {
       return (
         <div id="mainContainer">
           <div id='navBar'>
+            <a href="https://github.com/Vschool-memeGuys-project/meme-generator" target="_blank" id="githubLink">Github</a>
             <h1 id="pageHeader">The Meme <br></br> Machine</h1>
           </div>
 

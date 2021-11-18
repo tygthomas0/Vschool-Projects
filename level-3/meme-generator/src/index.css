@@ -3,6 +3,16 @@
 	padding: 0;
 }
 
+#githubLink {
+	position: absolute;
+	z-index: 2;
+	margin: 0px 25px;
+	left: 0;
+	color: #d8c17a;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 2rem;
+}
+
 body {
 	background-color: #263238;
 	color: #d8c17a;
