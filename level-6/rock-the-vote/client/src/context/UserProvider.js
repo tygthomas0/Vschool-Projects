@@ -121,12 +121,29 @@ export default function UserProvider(props) {
     function addPoem(newPoem) {
         userAxios.post("/api/poem", newPoem)
             .then(res => {
+                upvote(res.data.user, res.data._id)
+                /*
                 setUserState(prevState => ({
                     ...prevState,
                     poems: [...prevState.poems, res.data]
                 }))
+                */
             })
             .catch(err => console.log(err))
+    }
+
+    function deletePoem(poemID) {
+        userAxios.delete(`/api/poem/${poemID}`)
+            .then(res => {
+                getAllPoems()
+            })
+    }
+
+    function editPoem(poemID, updatedPoem) {
+        userAxios.put(`/api/poem/${poemID}`, updatedPoem)
+            .then(res => {
+                getAllPoems()
+            })
     }
 
     function addComment(newComment) {
@@ -144,9 +161,7 @@ export default function UserProvider(props) {
         var poem;
         userAxios.get(`/api/poem/indvPoem/${poemId}`)
             .then(res => {
-                console.log(res.data)
                 poem = res.data[0]
-                console.log("poem in upvote: ", poem)
 
                 if (poem.upVoters.indexOf(voterId) !== -1) {
                     var tempArray = poem.upVoters;
@@ -175,7 +190,6 @@ export default function UserProvider(props) {
                         points: poem.points + 1
                     }
                 }
-                console.log("poem after changes in upvote: ", poem)
 
                 userAxios.put(`/api/poem/indvPoem/${poemId}`, poem)
                     .then(res => {
@@ -191,9 +205,7 @@ export default function UserProvider(props) {
         var poem;
         userAxios.get(`/api/poem/indvPoem/${poemId}`)
             .then(res => {
-                console.log(res.data)
                 poem = res.data[0]
-                console.log("poem in downvote: ", poem)
 
                 if (poem.downVoters.indexOf(voterId) !== -1) {
                     var tempArray = poem.downVoters;
@@ -222,7 +234,6 @@ export default function UserProvider(props) {
                         points: poem.points - 1
                     }
                 }
-                console.log("poem after changes in downvote: ", poem)
 
                 userAxios.put(`/api/poem/indvPoem/${poemId}`, poem)
                     .then(res => {
@@ -242,7 +253,7 @@ export default function UserProvider(props) {
     */
 
     return (
-        <UserContext.Provider value={{...userState, signup, login, logout, addPoem, addComment, resetAuthErr, getAllPoems, upvote, downvote}}>
+        <UserContext.Provider value={{...userState, signup, login, logout, addPoem, deletePoem, editPoem, addComment, resetAuthErr, getAllPoems, upvote, downvote}}>
             { props.children }
         </UserContext.Provider>
     )
