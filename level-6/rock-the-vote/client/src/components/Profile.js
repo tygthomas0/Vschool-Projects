@@ -5,7 +5,7 @@ import Poem from './Poem.js'
 import { UserContext } from '../context/UserProvider.js'
 
 export default function Profile(){
-  const { user: { username }, addPoem, poems, getAllPoems} = useContext(UserContext)
+  const { user: { username }, addPoem, poems, getAllPoems, editPoem} = useContext(UserContext)
 
   /*
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Profile(){
     <div className="profile">
       <h1>Welcome @{username}!</h1>
       <h3>Add A Poem</h3>
-      <PoemForm addPoem={addPoem}/>
+      <PoemForm addPoem={addPoem} editPoem={editPoem} title={""} description={""} editing={false}/>
       <h3>Your Poems</h3>
       <PoemList poems={poems}/>
     </div>

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-const initInputs = {
-  title: "",
-  description: ""
-}
-
 export default function PoemForm(props){
+  const initInputs = {
+    title: props.title,
+    description: props.description
+  }
+
   const [inputs, setInputs] = useState(initInputs)
-  const {addPoem} = props
+  const {addPoem, editPoem} = props
 
   function handleChange(e){
     const {name, value} = e.target
@@ -19,11 +19,12 @@ export default function PoemForm(props){
 
   function handleSubmit(e){
     e.preventDefault()
-    addPoem(inputs)
+    props.editing ? editPoem(props.poemID, inputs) : addPoem(inputs)
     setInputs(initInputs)
+    props.editing ? window.location.reload(false) : console.log()
   }
 
-  const { title, description} = inputs
+  const { title, description } = inputs
   return (
     <form onSubmit={handleSubmit}>
       <input 
@@ -31,14 +32,14 @@ export default function PoemForm(props){
         name="title" 
         value={title} 
         onChange={handleChange} 
-        placeholder="Title"/>
+        placeholder="Poem Title"/>
       <input 
         type="text" 
         name="description" 
         value={description} 
         onChange={handleChange} 
-        placeholder="Description"/>
-      <button>Add Poem</button>
+        placeholder="Poem Body"/>
+      {props.editing ? <button>Edit Poem</button> : <button>Add Poem</button>}
     </form>
   )
 }
